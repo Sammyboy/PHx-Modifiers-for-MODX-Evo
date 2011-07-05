@@ -28,8 +28,8 @@ if (!function_exists('search_replace')) {
 }
 
 $options   = explode("||", trim($options));
-for ($i=0; $i<count($options); $i++) {
-    list($key, $value) = explode("==", trim($options[$i]));
+foreach ($options as $option) {
+    list($key, $value) = explode("==", trim($option));
     $replace[trim($key)] = trim($value);
 }
 
